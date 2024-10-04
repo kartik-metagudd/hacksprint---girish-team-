@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1e1e1e; /* Dark background */
+    color: #fff; /* White text color */
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+/* Unique styles for each section */
+#clock {
+    font-size: 4em; /* Adjust font size */
+    font-weight: bold;
+    color: #ed0d0d; /* Red color for clock numbers */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+#date {
+    margin-top: 10px;
+    font-size: 1.5em;
+    background-color: #4a4a4a; /* Slightly lighter grey for date */
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+#alarm {
+    background-color: #5a5a5a; /* Different grey for alarm */
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+#stopwatch {
+    background-color: #6a6a6a; /* Another grey for stopwatch */
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+#countdown {
+    background-color: #7a7a7a; /* Unique color for countdown */
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+#themes {
+    background-color: #8a8a8a; /* Light grey for themes */
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+#day-night-indicator {
+    background-color: #9a9a9a; /* Grey for day/night indicator */
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Common styles */
+button {
+    background-color: #444; /* Dark button background */
+    color: #fff; /* White button text */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding for buttons */
+    margin: 5px; /* Margin around buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+button:hover {
+    background-color: #666; /* Lighter color on hover */
+}
+
+/* Light Theme */
+body.light {
+    background-color: #f0f0f0; /* Light background */
+    color: #000; /* Black text for light theme */
+}
+
+body.light .container {
+    background-color: #fff; /* White background for container in light theme */
+}
+
+/* Dark Theme */
+body.dark {
+    background-color: #1e1e1e; /* Dark background for dark theme */
+    color: #fff; /* White text for dark theme */
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Digital Clock Website</title>
+    
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif; /* Use a clean font */
+            background-color: #f0f0f0; /* Light background */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full height */
+        }
+        
+        .container {
+            text-align: center;
+            background-color: #ffffff; /* White background for the container */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        #clock {
+            font-size: 4em; /* Larger font size for the clock */
+            color: #333; /* Dark text color */
+        }
+
+        #time-zone, #alarm, #stopwatch, #countdown, #day-night-indicator {
+            margin: 15px 0;
+            font-size: 0.9em; /* Smaller font size for other sections */
+        }
+
+        #themes button {
+            margin: 5px;
+            padding: 8px 16px;
+            font-size: 0.8em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #themes button:hover {
+            background-color: #007bff; /* Blue hover effect */
+            color: white; /* White text on hover */
+        }
+
+        input[type="time"], input[type="number"], select {
+            padding: 8px;
+            font-size: 0.9em;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: calc(100% - 22px); /* Adjust width to fit within container */
+        }
+
+        button {
+            padding: 8px 16px;
+            font-size: 0.9em; /* Slightly smaller font size */
+            border: none;
+            border-radius: 5px;
+            background-color: #28a745; /* Green button color */
+            color: white; /* White text color */
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #218838; /* Darker green on hover */
+        }
+
+        #day-night-indicator {
+            font-size: 1em; /* Smaller font size */
+            margin-top: 15px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Basic Time Display -->
+        <div id="clock">
+            <span id="time"></span>
+            <span id="am-pm"></span>
+        </div>
+
+        <!-- Time Zones Selector -->
+        <div id="time-zone">
+            <label for="zones">Select Time Zone:</label>
+            <select id="zones"></select>
+        </div>
+
+        <!-- Alarm -->
+        <div id="alarm">
+            <input type="time" id="alarm-time" />
+            <button onclick="setAlarm()">Set Alarm</button>
+            <div id="alarm-status"></div>
+        </div>
+
+        <!-- Stopwatch -->
+        <div id="stopwatch">
+            <div id="stopwatch-time">00:00:00</div>
+            <button onclick="startStopwatch()">Start</button>
+            <button onclick="stopStopwatch()">Stop</button>
+            <button onclick="resetStopwatch()">Reset</button>
+        </div>
+
+        <!-- Countdown Timer -->
+        <div id="countdown">
+            <input type="number" id="timer-minutes" placeholder="Minutes">
+            <button onclick="startTimer()">Start Timer</button>
+            <div id="timer-display"></div>
+        </div>
+
+        <!-- Custom Themes -->
+        <div id="themes">
+            <button onclick="setTheme('light')">Light Theme</button>
+            <button onclick="setTheme('dark')">Dark Theme</button>
+        </div>
+
+        <!-- Day/Night Indicator -->
+        <div id="day-night-indicator"></div>
+    </div>
+
+    <!-- Link to the JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
